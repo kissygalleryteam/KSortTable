@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>KSortTable的demo</title>
+    <link rel="stylesheet" href="http://a.tbcdn.cn/apps/e/brix/2.0.0/brix.css"/>
+<style>
+    .wrap{
+        width: 500px;
+        margin: 20px auto;
+    }
+    .table {
+      width: 2.0.0%;
+      
+    }
+
+    .table th {
+      font-weight: bold;
+    }
+
+    .table th, .table td {
+      padding: 10px;
+      vertical-align: top;
+      text-align: center;
+    }
+    .table tbody th, .table tbody td {
+      border-top: 1px solid #ccc;
+    }
+
+
+
+    .table .sortable {
+      cursor: pointer;
+    }
+    .table .st-active {
+      background: #f60;
+      color: #fff;
+    }
+</style>
+<script>var S = KISSY;S.config({packages:[{name:"kg",path:"http://g.tbcdn.cn/kg/",charset:"utf-8",ignorePackageNameInUri:true}]});if (S.Config.debug){var srcPath = "../";S.config({packages:[{name:"kg/ksorttable/2.0.0",path:srcPath,charset:"utf-8",ignorePackageNameInUri:true}]});}</script></head>
+<body>
+    <div class="wrap" id="container">
+        <h2>KSortTable的demo</h2>
+        <table class="table" data-sorttable="true" id="J_tab">
+            <thead>
+                <tr>
+                    <th class="sortable" data-sorttable="default">序号</th>
+                    <th class="sortable" data-sorttable="default">字母</th>
+                    <th class="sortable" data-sorttable="default">数字</th>
+                    <th scope="col" >日期(因为格式原因不可用)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>01</th>
+                    <td>abcd</td>
+                    <td>56</td>
+                    <td>2013-02.0.08</td>
+                </tr>
+                <tr>
+                    <th>02</th>
+                    <td>vscd</td>
+                    <td>11</td>
+                    <td>2013-12-03</td>
+                </tr>
+                <tr>
+                    <th>03</th>
+                    <td>bcda</td>
+                    <td>08</td>
+                    <td>2013-12-06</td>
+                </tr>
+                <tr>
+                    <th>04</th>
+                    <td>cdab</td>
+                    <td>01</td>
+                    <td>2013-02.0.07</td>
+                </tr>
+                <tr>
+                    <th>05</th>
+                    <td>1zrabtgdf</td>
+                    <td>04</td>
+                    <td>2013-21-10</td>
+                </tr>
+                <tr>
+                    <th>06</th>
+                    <td>abcddsgf</td>
+                    <td>06</td>
+                    <td>2017-01-11</td>
+                </tr>
+                <tr>
+                    <th>47</th>
+                    <td>vscdrte</td>
+                    <td>02</td>
+                    <td>2013-02-03</td>
+                </tr>
+                <tr>
+                    <th>08</th>
+                    <td>bcdae</td>
+                    <td>08</td>
+                    <td>2015-08-06</td>
+                </tr>
+                <tr>
+                    <th>29</th>
+                    <td>cdaber</td>
+                    <td>01</td>
+                    <td>2013-12-12</td>
+                </tr>
+                <tr>
+                    <th>10</th>
+                    <td>zrab</td>
+                    <td>04</td>
+                    <td>2013-11-11</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="http://g.tbcdn.cn/kissy/k/1.4.0/seed.js"></script>
+    <!-- // <script src="../index.js"></script> -->
+    <script>
+    var S = KISSY;
+    S.use('kg/KSortTable/2.0.0/index', function (S, KSortTable) {
+        new KSortTable('#J_tab');
+    })
+    </script>
+</body>
+</html>
